@@ -28,6 +28,7 @@ public class GameJamTarget : MonoBehaviour
         if (flame > flameCap)
         {
             flame = flameCap;
+            TilemapTileChanger.SetFlamed(tilePointer.position);
         }
     }
 

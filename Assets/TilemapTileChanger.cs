@@ -34,4 +34,10 @@ public class TilemapTileChanger : MonoBehaviour
         var index = instance.underAttack.WorldToCell(tilePosition);
         instance.underAttack.SetColor(index, new Color(1, 1, 1, 1));
     }
+
+    public static void SetFlamed(Vector3 tilePosition)
+    {
+        var index = instance.flamed.WorldToCell(tilePosition);
+        instance.flamed.SetColor(index, new Color(1, 1, 1, 1));
+    }
 }
