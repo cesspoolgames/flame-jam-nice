@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public float firstLoopPlayMinutes = 2;
+    public float secondLoopPlayMinutes = 2;
     public float thirdLoopPlayMinutes = 1;
     public float wait = 0.1f;
     private float timePassed;
