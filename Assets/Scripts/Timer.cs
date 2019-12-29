@@ -10,7 +10,6 @@ public class Timer : MonoBehaviour
     private float diff;
     public delegate void TimerTimeOutAction();
     public static event TimerTimeOutAction OnTimeOut;
-    public Flame flame;
 
     bool timeEnded = false;
 
@@ -27,7 +26,6 @@ public class Timer : MonoBehaviour
             realTimeSeconds -= Time.deltaTime;
             int timeToShow = (int)(realTimeSeconds * diff) + 1;
             mText.text = timeToShow.ToString() + 'h';
-            flame.SetFillBar(1 - realTimeSeconds / 10);
         }
         else
         {

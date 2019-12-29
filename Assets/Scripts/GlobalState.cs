@@ -7,6 +7,7 @@ public class GlobalState : MonoBehaviour
 {
     public GameObject gameOverText;
     public GameObject debugText;
+    public Flame flameBar;
 
     private static GameJamTarget currentTable;
     public static GameJamTarget CurrentTable
@@ -35,13 +36,15 @@ public class GlobalState : MonoBehaviour
         debugText.GetComponent<Text>().text = "";
         var hitAreas = GameObject.FindGameObjectsWithTag("HitArea");
         var text = "";
-        var average = 0f;
+        var sum = 0f;
         foreach (var area in hitAreas)
         {
             var flame = area.GetComponent<GameJamTarget>().Flame;
             text += flame.ToString("0.00") + " | ";
-            average += flame / hitAreas.Length;
+            sum += flame;
         }
-        debugText.GetComponent<Text>().text = text + " ==> " + average.ToString();
+        debugText.GetComponent<Text>().text = text + " ==> " + sum.ToString();
+
+        flameBar.SetFillBar(sum / 25);
     }
 }

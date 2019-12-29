@@ -13,9 +13,9 @@ public class GameJamTarget : MonoBehaviour
         get { return flame; }
     }
 
-    public void GetHit()
+    public void GetHit(float howMuch)
     {
-        flame += 0.4f;
+        flame += howMuch;
         if (flame > flameCap)
         {
             flame = flameCap;
