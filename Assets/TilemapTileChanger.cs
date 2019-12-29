@@ -30,6 +30,6 @@ public class TilemapTileChanger : MonoBehaviour
     public static void SetUnderAttack(Vector3 tilesetPointer)
     {
         var index = instance.underAttack.layoutGrid.WorldToCell(tilesetPointer);
-        instance.underAttack.SetColor(index, Color.black);
+        instance.underAttack.SetColor(index, Color.white);
     }
 }
