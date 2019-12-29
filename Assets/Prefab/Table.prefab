@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1435513904}
   - component: {fileID: 1435513905}
+  - component: {fileID: 1435513906}
   m_Layer: 8
   m_Name: HitArea
   m_TagString: HitArea
@@ -47,6 +48,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1435513906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435513903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320c26a6146e43096b6aeedd5780d9c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4305557392451748640
 GameObject:
   m_ObjectHideFlags: 0
