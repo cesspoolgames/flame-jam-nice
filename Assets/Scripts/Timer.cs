@@ -8,13 +8,9 @@ public class Timer : MonoBehaviour
     public static float realTimeSeconds = 10.0f;
     public static float displayTimeHours = 36.0f;
     private float diff = displayTimeHours / realTimeSeconds;
-    // Start is called before the first frame update
-    void Start()
-    {
+    public delegate void TimerTimeOutAction();
+    public static event TimerTimeOutAction OnTimeOut;
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (realTimeSeconds >= 0)
@@ -28,6 +24,10 @@ public class Timer : MonoBehaviour
         {
             TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
             mText.text = "0h";
+            if (OnTimeOut != null)
+            {
+                OnTimeOut();
+            }
         }
     }
 }
