@@ -8,7 +8,6 @@ public class AudioManager : MonoBehaviour
     public float firstLoopPlayMinutes = 2;
     public float secondLoopPlayMinutes = 2;
     public float thirdLoopPlayMinutes = 1;
-    public float wait = 0.1f;
     private float timePassed;
     private bool soundOneStarted = false;
     private bool soundTwoStarted = false;
