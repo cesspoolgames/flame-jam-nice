@@ -336,18 +336,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8404482831165026320}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &530595227
-MonoBehaviour:
+--- !u!95 &530595228
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530595221}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0be0d3fcd9b4f68268b6525d736b3327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 622d9e2aeed3a0d98b021fb857e11cd0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &533990455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -913,11 +920,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8404482832169510644, guid: a55c8a05f32ce3d9c9b58901acbc17f7,
+    - target: {fileID: 8404482832169510645, guid: a55c8a05f32ce3d9c9b58901acbc17f7,
         type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8191305386703943913, guid: e56d602a2702e94608609a3668763ba3,
+        type: 3}
     - target: {fileID: 8404482832169510646, guid: a55c8a05f32ce3d9c9b58901acbc17f7,
         type: 3}
       propertyPath: m_LocalPosition.x
