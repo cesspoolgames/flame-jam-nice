@@ -7,8 +7,8 @@ public class GlobalState : MonoBehaviour
 {
     public GameObject gameOverText;
 
-    private static GameJamTable currentTable;
-    public static GameJamTable CurrentTable
+    private static GameJamTarget currentTable;
+    public static GameJamTarget CurrentTable
     {
         set { currentTable = value; } // so we can have more control later on
         get { return currentTable; }

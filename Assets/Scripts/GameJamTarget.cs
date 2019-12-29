@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameJamTable : MonoBehaviour
+public class GameJamTarget : MonoBehaviour
 {
     public float flameCap = 100f; // can't flame over this value
     private float flame = 0f; // decreases over time
