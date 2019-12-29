@@ -5,12 +5,18 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public static float realTimeSeconds = 10.0f;
-    public static float displayTimeHours = 36.0f;
-    private float diff = displayTimeHours / realTimeSeconds;
+    public float realTimeSeconds = 10.0f;
+    public float displayTimeHours = 36.0f;
+    private float diff;
     public delegate void TimerTimeOutAction();
     public static event TimerTimeOutAction OnTimeOut;
     public Flame flame;
+
+    void Start()
+    {
+        diff = displayTimeHours / realTimeSeconds;
+    }
+
     void Update()
     {
         if (realTimeSeconds >= 0)
