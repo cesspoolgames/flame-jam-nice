@@ -8,13 +8,21 @@ public class GameJamTarget : MonoBehaviour
     private float flame = 0f; // decreases over time
     private float healPerSecond = 0.5f;
 
+    private Transform tilePointer;
+
     public float Flame
     {
         get { return flame; }
     }
 
+    void Start()
+    {
+        tilePointer = transform.Find("TilePointer");
+    }
+
     public void GetHit(float howMuch)
     {
+        TilemapTileChanger.SetUnderAttack(tilePointer.position);
         flame += howMuch;
         if (flame > flameCap)
         {
