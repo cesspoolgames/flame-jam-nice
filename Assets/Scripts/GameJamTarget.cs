@@ -18,6 +18,7 @@ public class GameJamTarget : MonoBehaviour
     void Start()
     {
         tilePointer = transform.Find("TilePointer");
+        TilemapTileChanger.ResetTile(tilePointer.position);
     }
 
     public void GetHit(float howMuch)

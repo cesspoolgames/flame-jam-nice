@@ -10,7 +10,7 @@ public class TilemapTileChanger : MonoBehaviour
 
     private static TilemapTileChanger instance;
 
-    void Awake()
+    void Start()
     {
         if (instance == null)
         {
@@ -18,18 +18,20 @@ public class TilemapTileChanger : MonoBehaviour
         }
     }
 
-    public static void ResetTile(Vector3 tilesetPointer)
+    public static void ResetTile(Vector3 tilePosition)
     {
         Vector3Int index;
-        index = instance.underAttack.layoutGrid.WorldToCell(tilesetPointer);
-        instance.underAttack.color = new Color(1, 1, 1, 0);
-        index = instance.flamed.layoutGrid.WorldToCell(tilesetPointer);
-        instance.flamed.color = new Color(1, 1, 1, 0);
+        index = instance.underAttack.WorldToCell(tilePosition);
+        instance.underAttack.SetTileFlags(index, TileFlags.None);
+        instance.underAttack.SetColor(index, new Color(1, 1, 1, 0));
+        index = instance.flamed.WorldToCell(tilePosition);
+        instance.flamed.SetTileFlags(index, TileFlags.None);
+        instance.flamed.SetColor(index, new Color(1, 1, 1, 0));
     }
 
-    public static void SetUnderAttack(Vector3 tilesetPointer)
+    public static void SetUnderAttack(Vector3 tilePosition)
     {
-        var index = instance.underAttack.layoutGrid.WorldToCell(tilesetPointer);
-        instance.underAttack.SetColor(index, Color.white);
+        var index = instance.underAttack.WorldToCell(tilePosition);
+        instance.underAttack.SetColor(index, new Color(1, 1, 1, 1));
     }
 }
