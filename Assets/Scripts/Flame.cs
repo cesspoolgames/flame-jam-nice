@@ -9,7 +9,6 @@ public class Flame : MonoBehaviour
     public Transform fillImage;
     void Start()
     {
-        Debug.Log(this.fillImage);
         var newScale = this.fillImage.localScale;
         newScale.x = 0;
         this.fillImage.localScale = newScale;
