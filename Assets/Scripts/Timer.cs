@@ -5,7 +5,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public static float realTimeSeconds = 300.0f;
+    public static float realTimeSeconds = 10.0f;
     public static float displayTimeHours = 36.0f;
     private float diff = displayTimeHours / realTimeSeconds;
     // Start is called before the first frame update
@@ -17,9 +17,17 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
-        realTimeSeconds -= Time.deltaTime;
-        int timeToShow = (int)(realTimeSeconds * diff);
-        mText.text = timeToShow.ToString();
+        if (realTimeSeconds >= 0)
+        {
+            TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
+            realTimeSeconds -= Time.deltaTime;
+            int timeToShow = (int)(realTimeSeconds * diff) + 1;
+            mText.text = timeToShow.ToString() + 'h';
+        }
+        else
+        {
+            TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
+            mText.text = "0h";
+        }
     }
 }
