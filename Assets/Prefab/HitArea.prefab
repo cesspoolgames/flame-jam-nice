@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4926659450073981348}
   - component: {fileID: 2984254483134398764}
   - component: {fileID: 9063725393095893342}
+  - component: {fileID: 403519662}
   m_Layer: 8
   m_Name: HitArea
   m_TagString: HitArea
@@ -57,6 +58,19 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0022961842, y: 0.034434408}
-  m_Size: {x: 1.2341595, y: 0.5362826}
+  m_Offset: {x: -0.32277125, y: 0.034434445}
+  m_Size: {x: 0.5840269, y: 0.5362826}
   m_Direction: 1
+--- !u!114 &403519662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4307657497501587327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e38e54496e68162a5e8ce2f83f8fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flameCap: 100

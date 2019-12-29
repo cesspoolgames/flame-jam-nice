@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class GlobalState : MonoBehaviour
 {
     public GameObject gameOverText;
+    public GameObject debugText;
 
-    private static GameJamTable currentTable;
-    public static GameJamTable CurrentTable
+    private static GameJamTarget currentTable;
+    public static GameJamTarget CurrentTable
     {
         set { currentTable = value; } // so we can have more control later on
         get { return currentTable; }
@@ -27,5 +28,18 @@ public class GlobalState : MonoBehaviour
     void OnTimeOut()
     {
         gameOverText.SetActive(true);
+    }
+
+    void Update()
+    {
+        debugText.GetComponent<Text>().text = "";
+        var hitAreas = GameObject.FindGameObjectsWithTag("HitArea");
+        var text = "";
+        foreach (var area in hitAreas)
+        {
+            var flame = area.GetComponent<GameJamTarget>().Flame;
+            text += flame.ToString("0.00") + " | ";
+        }
+        debugText.GetComponent<Text>().text = text;
     }
 }

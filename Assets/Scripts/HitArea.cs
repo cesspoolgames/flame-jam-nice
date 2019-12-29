@@ -11,7 +11,7 @@ public class HitArea : MonoBehaviour
         if (collider.tag == "Player")
         {
             playerOverlap = true;
-            GlobalState.CurrentTable = GetComponent<GameJamTable>();
+            GlobalState.CurrentTable = GetComponent<GameJamTarget>();
         }
     }
 
@@ -20,7 +20,7 @@ public class HitArea : MonoBehaviour
         if (collider.tag == "Player")
         {
             playerOverlap = false;
-            if (GlobalState.CurrentTable == GetComponent<GameJamTable>())
+            if (GlobalState.CurrentTable == GetComponent<GameJamTarget>())
             {
                 GlobalState.CurrentTable = null;
             };
