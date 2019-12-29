@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GlobalState : MonoBehaviour
 {
-    public Text gameOverText;
+    public GameObject gameOverText;
 
     private static GameJamTable currentTable;
     public static GameJamTable CurrentTable
@@ -16,7 +16,6 @@ public class GlobalState : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("hey");
         Timer.OnTimeOut += OnTimeOut;
     }
 
@@ -27,7 +26,6 @@ public class GlobalState : MonoBehaviour
 
     void OnTimeOut()
     {
-        Debug.Log("he2");
-        gameOverText.enabled = true;
+        gameOverText.SetActive(true);
     }
 }

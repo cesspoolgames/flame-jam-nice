@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     public static event TimerTimeOutAction OnTimeOut;
     public Flame flame;
 
+    bool timeEnded = false;
+
     void Start()
     {
         diff = displayTimeHours / realTimeSeconds;
@@ -31,8 +33,9 @@ public class Timer : MonoBehaviour
         {
             TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
             mText.text = "0h";
-            if (OnTimeOut != null)
+            if (OnTimeOut != null && !timeEnded)
             {
+                timeEnded = true;
                 OnTimeOut();
             }
         }
