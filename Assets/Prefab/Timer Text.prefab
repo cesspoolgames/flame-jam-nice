@@ -170,4 +170,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   realTimeSeconds: 10
   displayTimeHours: 36
-  flame: {fileID: 0}
