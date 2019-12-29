@@ -35,11 +35,13 @@ public class GlobalState : MonoBehaviour
         debugText.GetComponent<Text>().text = "";
         var hitAreas = GameObject.FindGameObjectsWithTag("HitArea");
         var text = "";
+        var average = 0f;
         foreach (var area in hitAreas)
         {
             var flame = area.GetComponent<GameJamTarget>().Flame;
             text += flame.ToString("0.00") + " | ";
+            average += flame / hitAreas.Length;
         }
-        debugText.GetComponent<Text>().text = text;
+        debugText.GetComponent<Text>().text = text + " ==> " + average.ToString();
     }
 }
