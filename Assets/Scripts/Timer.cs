@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
             realTimeSeconds -= Time.deltaTime;
             int timeToShow = (int)(realTimeSeconds * diff) + 1;
             mText.text = timeToShow.ToString() + 'h';
-            flame.SetFillBar(realTimeSeconds * 0.01f);
+            flame.SetFillBar(1 - realTimeSeconds / 10);
         }
         else
         {
