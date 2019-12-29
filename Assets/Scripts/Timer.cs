@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     private float diff = displayTimeHours / realTimeSeconds;
     public delegate void TimerTimeOutAction();
     public static event TimerTimeOutAction OnTimeOut;
-
+    public Flame flame;
     void Update()
     {
         if (realTimeSeconds >= 0)
@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
             realTimeSeconds -= Time.deltaTime;
             int timeToShow = (int)(realTimeSeconds * diff) + 1;
             mText.text = timeToShow.ToString() + 'h';
+            flame.SetFillBar(realTimeSeconds * 0.01f);
         }
         else
         {
