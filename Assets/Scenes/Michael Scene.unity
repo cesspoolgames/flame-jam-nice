@@ -473,6 +473,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 340400071}
     m_Modifications:
+    - target: {fileID: 525083314805434708, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 488.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 525083314805434708, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 211.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 644910269948216103, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+        type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 644910270069765990, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
         type: 3}
       propertyPath: m_Name
@@ -533,13 +548,55 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8438307364800135628, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+    - target: {fileID: 2046903241186054233, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -2.899994
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 644910269708901519}
+    - target: {fileID: 6504247588116744066, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 483.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504247588116744066, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 210.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504247588116744066, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3788617
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504247588116744066, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2577825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504247588116744066, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.7632
+      objectReference: {fileID: 0}
+    - target: {fileID: 6912459979665749898, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 81999f30faa5640bdb9ee8a37fccd297,
+        type: 3}
+    - target: {fileID: 8135887617258527590, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+        type: 3}
+      propertyPath: m_Name
+      value: FlameMask
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7, type: 3}
+--- !u!4 &644910269708901519 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6504247588116744066, guid: a5aa97147b4d94ea89b0a6f4ff7ad8b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 644910269708901518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7279858545327280629
 PrefabInstance:
   m_ObjectHideFlags: 0

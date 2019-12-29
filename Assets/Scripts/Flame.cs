@@ -16,7 +16,7 @@ public class Flame : MonoBehaviour
 
     public void SetFillBar(float fillAmount)
     {
-        fillAmount = Mathf.Clamp01(fillAmount);
+        fillAmount = Mathf.Clamp01(fillAmount) * 25;
         var newScale = this.fillImage.localScale;
         newScale.x = this.fullFillImage.localScale.y * fillAmount;
         this.fillImage.localScale = newScale;
