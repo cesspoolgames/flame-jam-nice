@@ -8,10 +8,8 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (GlobalState.CurrentTable)
-            {
-                GlobalState.CurrentTable.GetHit();
-            }
+            GlobalState.CurrentTable?.GetHit();
+            GetComponent<Animator>().SetTrigger("Attack");
         }
     }
 }
