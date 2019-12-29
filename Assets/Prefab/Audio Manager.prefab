@@ -49,7 +49,6 @@ MonoBehaviour:
   firstLoopPlayMinutes: 0.2
   secondLoopPlayMinutes: 0.2
   thirdLoopPlayMinutes: 0.2
-  wait: 1
 --- !u!1 &7285479935480773972
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +90,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 80613101115a0498d9bc63ca776d9675, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 68755ba2399d2474e98386a4bf68588e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -218,7 +217,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5452404a1a9b7418796a6d0f4ee502bb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 921f055ce34d84baf9ab054aaf6636b5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -345,7 +344,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: afd23ac5ac1f148d89a4dd14405c858b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 87a7d7836a5374a71947345d00b72138, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
