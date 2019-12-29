@@ -5,8 +5,9 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public float timeLeft = 30.0f;  
-    public float scrollBar = 30.0f;
+    public static float realTimeSeconds = 300.0f;
+    public static float displayTimeHours = 36.0f;
+    private float diff = displayTimeHours / realTimeSeconds;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +17,9 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Time.timeScale = scrollBar;
-        timeLeft -= Time.deltaTime;
         TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
-        mText.text = timeLeft.ToString();
+        realTimeSeconds -= Time.deltaTime;
+        int timeToShow = (int)(realTimeSeconds * diff);
+        mText.text = timeToShow.ToString();
     }
 }
