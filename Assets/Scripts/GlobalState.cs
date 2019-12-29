@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GlobalState : MonoBehaviour
 {
     public GameObject gameOverText;
+    public GameObject debugText;
 
     private static GameJamTarget currentTable;
     public static GameJamTarget CurrentTable
@@ -27,5 +28,18 @@ public class GlobalState : MonoBehaviour
     void OnTimeOut()
     {
         gameOverText.SetActive(true);
+    }
+
+    void Update()
+    {
+        debugText.GetComponent<Text>().text = "";
+        var hitAreas = GameObject.FindGameObjectsWithTag("HitArea");
+        var text = "";
+        foreach (var area in hitAreas)
+        {
+            var flame = area.GetComponent<GameJamTarget>().Flame;
+            text += flame.ToString("0.00") + " | ";
+        }
+        debugText.GetComponent<Text>().text = text;
     }
 }
