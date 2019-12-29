@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -10,6 +11,19 @@ public class PlayerMove : MonoBehaviour
         var vertical = Input.GetAxisRaw("Vertical");
 
         Move(horizontal, vertical);
+        RotateAccordingToPosition(horizontal, vertical);
+    }
+
+    private void RotateAccordingToPosition(float horizontal, float vertical)
+    {
+        if (horizontal > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        if (horizontal < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 
     private void Move(float horizontal, float vertical)
