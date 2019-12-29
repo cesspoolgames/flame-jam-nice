@@ -13,6 +13,12 @@ public class GameJamTarget : MonoBehaviour
         get { return flame; }
     }
 
+    void Start()
+    {
+        var tilePointer = transform.Find("TilePointer");
+        TilemapTileChanger.ResetTile(tilePointer.position);
+    }
+
     public void GetHit(float howMuch)
     {
         flame += howMuch;
