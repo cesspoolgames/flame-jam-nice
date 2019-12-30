@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 public class WinConditionManager : MonoBehaviour
 {
@@ -20,6 +18,7 @@ public class WinConditionManager : MonoBehaviour
 
     void GameWon()
     {
+        Debug.Log(SceneManagement.Scene.name);
         manager.StopSceneMusic();
         GameObject winSound = this.transform.Find("Audio Source Win").gameObject;
         winSound.GetComponent<AudioSource>().Play();

@@ -11,6 +11,7 @@ public class GlobalState : MonoBehaviour
     public float defaultLevelSeconds = 60;
     public float winFlamingTargetPercent = 80;
     public float healPerSecond = 0.5f;
+    public int lastScreenId = 2;
 
     public Flame flameBar;
     public AudioManager manager;
@@ -57,12 +58,24 @@ public class GlobalState : MonoBehaviour
     static public void LoadNextLevel()
     {
         level++;
-        SceneManager.LoadScene("Level" + level);
-        instance.timerRunning = true;
-        if (OnLevelStart != null)
+        if (level > lastScreenId)
         {
-            OnLevelStart();
+            SceneManager.LoadScene("FinalWin");
         }
+        else
+        {
+            SceneManager.LoadScene("Level" + level);
+            instance.timerRunning = true;
+            if (OnLevelStart != null)
+            {
+                OnLevelStart();
+            }
+        }
+    }
+
+    static public void LoadEndScreen()
+    {
+
     }
 
     static public void RestartLevel()
