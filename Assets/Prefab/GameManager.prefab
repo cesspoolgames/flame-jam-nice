@@ -51,7 +51,7 @@ MonoBehaviour:
   powerUpTimeSeconds: 2
   powerUpSpeedFactor: 2
   defaultLevelSeconds: 60
-  winFlamingTargetPercent: 80
+  winFlamingTargetPercent: 75
   healPerSecond: 0.7
   flameBar: {fileID: 7592605635871111217}
   manager: {fileID: 988092673783167278}
