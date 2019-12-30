@@ -19,11 +19,15 @@ public class WinConditionManager : MonoBehaviour
 
     void GameWon()
     {
+        GameObject winSound = this.transform.Find("Audio Source Win").gameObject;
+        winSound.GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("Win");
     }
 
     void EndGame()
     {
+        GameObject loseSound = this.transform.Find("Audio Source Lose").gameObject;
+        loseSound.GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("Lose");
     }
 
