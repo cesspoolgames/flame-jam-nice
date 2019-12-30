@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StartScreenStates : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class StartScreenStates : MonoBehaviour
         {
             gameObject.GetComponent<Image>().sprite = imageOptions[state];
             state += 1;
+        }
+        else if (state == 2)
+        {
+            SceneManager.LoadScene("Level0");
         }
     }
 }
