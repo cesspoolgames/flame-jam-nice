@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.2" tiledversion="1.3.1" name="Assets" tilewidth="32" tileheight="32" tilecount="224" columns="8">
- <image source="../../../../../../Desktop/FlameJam/Assets.png" width="257" height="897"/>
+ <image source="Assets.png" width="257" height="897"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0.125" y="0.125" width="31.625" height="31.5"/>
