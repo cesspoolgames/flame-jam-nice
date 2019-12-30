@@ -72,7 +72,7 @@ public class GlobalState : MonoBehaviour
         {
             var flame = area.GetComponent<GameJamTarget>().Flame;
             sum += flame;
-            manager.PlayPainSound();
+            //manager.PlayPainSound();
         }
         var totalNeeded = hitAreas.Length * 10 * winFlamingTargetPercent / 100; // 10 magic number = flaming cap
         Debug.Log(sum + " === " + totalNeeded);
