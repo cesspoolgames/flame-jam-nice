@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         RestartTime();
-        GlobalState.OnNewLevelStart += RestartTime;
+        GlobalState.OnLevelStart += RestartTime;
     }
 
     void Update()
