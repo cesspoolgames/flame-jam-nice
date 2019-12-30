@@ -1,19 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GlobalState : MonoBehaviour
 {
-    public GameObject gameOverText;
     public GameObject debugText;
-    public Flame flameBar;
+    private Flame flameBar;
 
     private static GameJamTarget currentTable;
+
+    private static int level = 0;
+
+    static GlobalState instance;
+
     public static GameJamTarget CurrentTable
     {
         set { currentTable = value; } // so we can have more control later on
         get { return currentTable; }
+    }
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += SearchForFlameBar;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void SearchForFlameBar(Scene scene, LoadSceneMode mode)
+    {
+        flameBar = GameObject.FindObjectOfType<Flame>();
     }
 
     void Start()
@@ -28,23 +51,31 @@ public class GlobalState : MonoBehaviour
 
     void OnTimeOut()
     {
-        gameOverText.SetActive(true);
+    }
+
+    static public void LoadNextLevel()
+    {
+        level++;
+        SceneManager.LoadScene("Level" + level);
+    }
+
+    static public void RestartLevel()
+    {
+        SceneManager.LoadScene("Level" + level);
     }
 
     void Update()
     {
-        debugText.GetComponent<Text>().text = "";
-        var hitAreas = GameObject.FindGameObjectsWithTag("HitArea");
-        var text = "";
-        var sum = 0f;
-        foreach (var area in hitAreas)
+        if (flameBar)
         {
-            var flame = area.GetComponent<GameJamTarget>().Flame;
-            text += flame.ToString("0.00") + " | ";
-            sum += flame;
+            var hitAreas = GameObject.FindGameObjectsWithTag("HitArea");
+            var sum = 0f;
+            foreach (var area in hitAreas)
+            {
+                var flame = area.GetComponent<GameJamTarget>().Flame;
+                sum += flame;
+            }
+            flameBar.SetFillBar(sum / 25); // TODO: per level win condition or %?
         }
-        debugText.GetComponent<Text>().text = text + " ==> " + sum.ToString();
-
-        flameBar.SetFillBar(sum / 25);
     }
 }
