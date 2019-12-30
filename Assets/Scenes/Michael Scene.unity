@@ -1210,16 +1210,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 923760061075228748, guid: 424e051a25f284801a74dae4e03784e5,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 9b69cf07fe08a4d70aaf515cdc06d77a, type: 3}
-    - target: {fileID: 923760061075228748, guid: 424e051a25f284801a74dae4e03784e5,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 923760061522159715, guid: 424e051a25f284801a74dae4e03784e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1279,16 +1269,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WinConditionGlobalManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 923760062783245854, guid: 424e051a25f284801a74dae4e03784e5,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 35040b368035a40d7910923e955153a8, type: 3}
-    - target: {fileID: 923760062783245854, guid: 424e051a25f284801a74dae4e03784e5,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424e051a25f284801a74dae4e03784e5, type: 3}
