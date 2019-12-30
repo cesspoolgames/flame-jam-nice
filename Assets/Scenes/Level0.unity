@@ -1304,5 +1304,10 @@ PrefabInstance:
       propertyPath: tilemapDebug
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8404482832169510648, guid: a55c8a05f32ce3d9c9b58901acbc17f7,
+        type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a55c8a05f32ce3d9c9b58901acbc17f7, type: 3}
