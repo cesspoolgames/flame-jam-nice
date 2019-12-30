@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GlobalState : MonoBehaviour
 {
     public GameObject debugText;
-    public Flame flameBar;
+    private Flame flameBar;
 
     private static GameJamTarget currentTable;
     public static GameJamTarget CurrentTable
@@ -18,6 +18,12 @@ public class GlobalState : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += SearchForFlameBar;
+    }
+
+    void SearchForFlameBar(Scene scene, LoadSceneMode mode)
+    {
+        flameBar = GameObject.FindObjectOfType<Flame>();
     }
 
     void Start()
@@ -36,13 +42,16 @@ public class GlobalState : MonoBehaviour
 
     void Update()
     {
-        var hitAreas = GameObject.FindGameObjectsWithTag("HitArea");
-        var sum = 0f;
-        foreach (var area in hitAreas)
+        if (flameBar)
         {
-            var flame = area.GetComponent<GameJamTarget>().Flame;
-            sum += flame;
+            var hitAreas = GameObject.FindGameObjectsWithTag("HitArea");
+            var sum = 0f;
+            foreach (var area in hitAreas)
+            {
+                var flame = area.GetComponent<GameJamTarget>().Flame;
+                sum += flame;
+            }
+            flameBar.SetFillBar(sum / 25); // TODO: per level win condition or %?
         }
-        flameBar.SetFillBar(sum / 25); // TODO: per level win condition or %?
     }
 }
