@@ -72,7 +72,6 @@ public class GlobalState : MonoBehaviour
         {
             var flameAmountOfArea = area.GetComponent<GameJamTarget>().Flame;
             sum += flameAmountOfArea;
-            manager.PlayPainSound();
         }
         if (hitAreas.Length > 0)
         {

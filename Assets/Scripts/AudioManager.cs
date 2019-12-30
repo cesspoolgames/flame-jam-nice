@@ -10,8 +10,6 @@ public class AudioManager : MonoBehaviour
     public float thirdLoopPlayMinutes = 1;
     public AudioSource randomStartStageSound;
     public AudioClip[] startStageAudioSources;
-    public AudioSource randomPainAudioSource;
-    public AudioClip[] painClips;
 
     private float timePassed;
     private bool soundOneStarted = false;
@@ -75,11 +73,5 @@ public class AudioManager : MonoBehaviour
         soundOneStarted = true;
         soundTwoStarted = true;
         soundThreeStarted = true;
-    }
-
-    public void PlayPainSound()
-    {
-        randomPainAudioSource.clip = painClips[Random.Range(0, painClips.Length)];
-        randomPainAudioSource.PlayOneShot(randomPainAudioSource.clip);
     }
 }
