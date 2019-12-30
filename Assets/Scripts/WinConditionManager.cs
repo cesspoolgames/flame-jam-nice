@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class WinConditionManager : MonoBehaviour
 {
     public AudioManager manager;
-    public int lastLevel = 2;
+    public int lastLevel = 3;
     private static WinConditionManager _instance;
     public static WinConditionManager Instance
     {
