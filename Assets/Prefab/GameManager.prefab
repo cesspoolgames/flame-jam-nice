@@ -46,4 +46,5 @@ MonoBehaviour:
   playerSpeed: 8
   defaultLevelSeconds: 60
   winFlamingTargetPercent: 90
+  healPerSecond: 300
   flameBar: {fileID: 0}
