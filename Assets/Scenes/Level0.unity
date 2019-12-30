@@ -926,10 +926,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5117300567774862641, guid: a3cedcb0413c97a80a25a91a8c085238,
+        type: 3}
+      propertyPath: defaultLevelSeconds
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5117300567774862655, guid: a3cedcb0413c97a80a25a91a8c085238,
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216390068884608800, guid: a3cedcb0413c97a80a25a91a8c085238,
+        type: 3}
+      propertyPath: m_text
+      value: 30:00
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216390068884608800, guid: a3cedcb0413c97a80a25a91a8c085238,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9216390068884608801, guid: a3cedcb0413c97a80a25a91a8c085238,
         type: 3}

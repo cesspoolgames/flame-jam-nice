@@ -43,6 +43,6 @@ public class WinConditionManager : MonoBehaviour
         }
 
         _instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        // DontDestroyOnLoad(this.gameObject);
     }
 }

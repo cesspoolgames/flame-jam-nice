@@ -15,6 +15,7 @@ public class Timer : MonoBehaviour
     {
         realTimeSeconds = GlobalState.instance.defaultLevelSeconds;
         diff = displayTimeHours / realTimeSeconds;
+        timeEnded = false;
     }
 
     bool timeEnded = false;

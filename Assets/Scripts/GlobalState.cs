@@ -57,7 +57,6 @@ public class GlobalState : MonoBehaviour
     static public void LoadNextLevel()
     {
         level++;
-        Debug.Log("LEVEL!" + level);
         SceneManager.LoadScene("Level" + level);
         instance.timerRunning = true;
         if (OnLevelStart != null)
