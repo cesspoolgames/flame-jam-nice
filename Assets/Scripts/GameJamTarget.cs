@@ -6,7 +6,6 @@ public class GameJamTarget : MonoBehaviour
 {
     const float flameCap = 10f; // can't flame over this value
     private float flame = 0f; // decreases over time
-    private float healPerSecond = 0.5f;
     private Transform tilePointer;
     private bool flamed = false; // when flamed is reached, keeps the flamed state until cooled down
 
@@ -37,7 +36,7 @@ public class GameJamTarget : MonoBehaviour
     {
         if (flame > 0)
         {
-            flame -= healPerSecond * Time.deltaTime;
+            flame -= GlobalState.instance.healPerSecond * Time.deltaTime;
         }
 
         if (flamed && flame / flameCap < 0.8f) // TODO: maybe put in a global UI changeable value
