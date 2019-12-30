@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class WinConditionManager : MonoBehaviour
 {
     public AudioManager manager;
+    public int lastLevel = 2;
     private static WinConditionManager _instance;
     public static WinConditionManager Instance
     {
@@ -19,10 +20,22 @@ public class WinConditionManager : MonoBehaviour
 
     void GameWon()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
         manager.StopSceneMusic();
-        GameObject winSound = this.transform.Find("Audio Source Win").gameObject;
-        winSound.GetComponent<AudioSource>().Play();
-        SceneManager.LoadScene("Win");
+        if ("Level" + lastLevel.ToString() == sceneName)
+        {
+            GameObject winFinalSound = this.transform.Find("Audio Source Final Win").gameObject;
+            winFinalSound.GetComponent<AudioSource>().Play();
+            SceneManager.LoadScene("FinalWin");
+        }
+        else
+        {
+            GameObject winSound = this.transform.Find("Audio Source Win").gameObject;
+            winSound.GetComponent<AudioSource>().Play();
+            SceneManager.LoadScene("Win");
+        }
+
     }
 
     void EndGame()

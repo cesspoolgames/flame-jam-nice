@@ -58,24 +58,12 @@ public class GlobalState : MonoBehaviour
     static public void LoadNextLevel()
     {
         level++;
-        if (level > lastScreenId)
+        SceneManager.LoadScene("Level" + level);
+        instance.timerRunning = true;
+        if (OnLevelStart != null)
         {
-            SceneManager.LoadScene("FinalWin");
+            OnLevelStart();
         }
-        else
-        {
-            SceneManager.LoadScene("Level" + level);
-            instance.timerRunning = true;
-            if (OnLevelStart != null)
-            {
-                OnLevelStart();
-            }
-        }
-    }
-
-    static public void LoadEndScreen()
-    {
-
     }
 
     static public void RestartLevel()
