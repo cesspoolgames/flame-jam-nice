@@ -7,6 +7,7 @@ TagManager:
   - HitArea
   - AudioManager
   - AudioSourcePain
+  - AudioSourcePowerUp
   layers:
   - Default
   - TransparentFX
