@@ -7,6 +7,7 @@ public class Flame : MonoBehaviour
     public Transform fullFillImage;
 
     public Transform fillImage;
+    public int fillRate = 12;
     private bool barFull = false;
     public delegate void FullBarAction();
     public static event FullBarAction OnBarFilled;
@@ -24,7 +25,7 @@ public class Flame : MonoBehaviour
             barFull = true;
             OnBarFilled();
         }
-        fillAmount = Mathf.Clamp01(fillAmount) * 25;
+        fillAmount = Mathf.Clamp01(fillAmount) * fillRate;
         var newScale = this.fillImage.localScale;
         newScale.x = this.fullFillImage.localScale.y * fillAmount;
         this.fillImage.localScale = newScale;
