@@ -31,8 +31,9 @@ public class PlayerMove : MonoBehaviour
     private void Move(float horizontal, float vertical)
     {
         var movement = new Vector3(horizontal, vertical, 0);
+        var factorByGameObjectScale = transform.localScale.x;
 
-        movement = movement.normalized * speed;
+        movement = movement.normalized * speed * factorByGameObjectScale;
         transform.position += movement * Time.deltaTime;
     }
 }
