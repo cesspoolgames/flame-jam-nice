@@ -11,7 +11,7 @@ public class GlobalState : MonoBehaviour
     public float healPerSecond = 0.5f;
 
     public Flame flameBar;
-    private AudioManager manager; 
+    public AudioManager manager;
     private static GameJamTarget currentTable;
 
     private static int level = 0;
@@ -30,7 +30,6 @@ public class GlobalState : MonoBehaviour
         {
             instance = this;
             flameBar = GameObject.FindObjectOfType<Flame>();
-            Debug.Log("FALEM" + flameBar);
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -75,7 +74,6 @@ public class GlobalState : MonoBehaviour
             manager.PlayPainSound();
         }
         var totalNeeded = hitAreas.Length * 10 * winFlamingTargetPercent / 100; // 10 magic number = flaming cap
-        Debug.Log(sum + " === " + totalNeeded);
         flameBar.SetFillBar(sum / totalNeeded); // TODO: per level win condition or %?
     }
 }

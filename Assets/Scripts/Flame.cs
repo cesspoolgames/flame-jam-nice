@@ -20,8 +20,8 @@ public class Flame : MonoBehaviour
 
     void ResetEverything()
     {
+        barFull = false;
         fillImage = GameObject.Find("FlameMask").transform;
-        Debug.Log("New fill image: " + fillImage);
         var newScale = this.fillImage.localScale;
         newScale.x = 0;
         this.fillImage.localScale = newScale;
@@ -34,10 +34,15 @@ public class Flame : MonoBehaviour
 
     public void SetFillBar(float fillAmount)
     {
-        if (fillAmount >= 1 && OnBarFilled != null && !barFull)
+        if (fillAmount >= 1 && !barFull)
         {
+            Debug.Log("TRUE");
             barFull = true;
-            OnBarFilled();
+            if (OnBarFilled != null)
+            {
+                Debug.Log("NICE");
+                OnBarFilled();
+            }
         }
         if (fillImage)
         {
