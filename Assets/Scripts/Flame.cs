@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Flame : MonoBehaviour
 {
@@ -13,13 +14,22 @@ public class Flame : MonoBehaviour
     public static event FullBarAction OnBarFilled;
     void Start()
     {
-        if (!fillImage)
-        {
+        SceneManager.sceneLoaded += FindNewFillImage;
+        ResetEverything();
+    }
 
-        }
+    void ResetEverything()
+    {
+        fillImage = GameObject.Find("FlameMask").transform;
+        Debug.Log("New fill image: " + fillImage);
         var newScale = this.fillImage.localScale;
         newScale.x = 0;
         this.fillImage.localScale = newScale;
+    }
+
+    void FindNewFillImage(Scene scene, LoadSceneMode loadMode)
+    {
+        ResetEverything();
     }
 
     public void SetFillBar(float fillAmount)
@@ -29,9 +39,12 @@ public class Flame : MonoBehaviour
             barFull = true;
             OnBarFilled();
         }
-        fillAmount = Mathf.Clamp01(fillAmount) * fillRate;
-        var newScale = this.fillImage.localScale;
-        newScale.x = this.fullFillImage.localScale.y * fillAmount;
-        this.fillImage.localScale = newScale;
+        if (fillImage)
+        {
+            fillAmount = Mathf.Clamp01(fillAmount) * fillRate;
+            var newScale = this.fillImage.localScale;
+            newScale.x = this.fullFillImage.localScale.y * fillAmount;
+            this.fillImage.localScale = newScale;
+        }
     }
 }
