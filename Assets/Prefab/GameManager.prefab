@@ -447,6 +447,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinConditionGlobalManager
       objectReference: {fileID: 0}
+    - target: {fileID: 923760062783245854, guid: 424e051a25f284801a74dae4e03784e5,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fd9d5b2a0ffe542e4b12193cfbadf122, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424e051a25f284801a74dae4e03784e5, type: 3}
 --- !u!4 &923760062137660686 stripped
