@@ -8,7 +8,15 @@ public class LoseInput : MonoBehaviour
 
     void Start()
     {
-        winOrLoseBg.Play();
+        if (winOrLoseBg != null)
+        {
+            winOrLoseBg.Play();
+        }
+        else
+        {
+            winOrLoseBg = GameObject.FindWithTag("AudioSourceLoseOrWinBgMusic").GetComponent<AudioSource>();
+            winOrLoseBg.Play();
+        }
     }
 
     // Update is called once per frame
