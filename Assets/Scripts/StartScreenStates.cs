@@ -15,17 +15,14 @@ public class StartScreenStates : MonoBehaviour
 
     void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && state < 2)
         {
-            if (state < 2)
-            {
-                gameObject.GetComponent<Image>().sprite = imageOptions[state];
-            }
-            else
-            {
-                SceneManager.LoadScene("Level0");
-            }
+            gameObject.GetComponent<Image>().sprite = imageOptions[state];
             state += 1;
+        }
+        else if (state == 2)
+        {
+            SceneManager.LoadScene("Level0");
         }
     }
 }
