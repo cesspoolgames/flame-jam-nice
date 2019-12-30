@@ -4,7 +4,7 @@
   <export target="." format="tmx"/>
  </editorsettings>
  <tileset firstgid="1" source="../Tileset.tsx"/>
- <tileset firstgid="36" source="../../../Documents/GitHub/flame-jam-nice/Assets/Tiled/FlameJam/Assets.tsx"/>
+ <tileset firstgid="36" source="../Assets.tsx"/>
  <layer id="1" name="Background" width="30" height="30">
   <data encoding="csv">
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
