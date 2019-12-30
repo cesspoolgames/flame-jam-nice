@@ -120,12 +120,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &60910037 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5117300567774862640, guid: a3cedcb0413c97a80a25a91a8c085238,
+    type: 3}
+  m_PrefabInstance: {fileID: 1469814375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &132043802
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 60910037}
     m_Modifications:
     - target: {fileID: 9216390068399732546, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
@@ -145,22 +151,22 @@ PrefabInstance:
     - target: {fileID: 9216390068399732547, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 90
+      value: 90.02045
       objectReference: {fileID: 0}
     - target: {fileID: 9216390068399732547, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9216390068399732547, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9216390068399732547, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9216390068399732547, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
@@ -170,7 +176,7 @@ PrefabInstance:
     - target: {fileID: 9216390068399732547, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9216390068399732547, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
@@ -190,12 +196,12 @@ PrefabInstance:
     - target: {fileID: 9216390068399732547, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 4.8071404
       objectReference: {fileID: 0}
     - target: {fileID: 9216390068399732547, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.30648056
       objectReference: {fileID: 0}
     - target: {fileID: 9216390068399732547, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
