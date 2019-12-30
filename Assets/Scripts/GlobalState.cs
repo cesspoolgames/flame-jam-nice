@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class GlobalState : MonoBehaviour
 {
-    public GameObject gameOverText;
     public GameObject debugText;
     public Flame flameBar;
 
@@ -14,6 +13,11 @@ public class GlobalState : MonoBehaviour
     {
         set { currentTable = value; } // so we can have more control later on
         get { return currentTable; }
+    }
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -28,7 +32,6 @@ public class GlobalState : MonoBehaviour
 
     void OnTimeOut()
     {
-        gameOverText.SetActive(true);
     }
 
     void Update()
