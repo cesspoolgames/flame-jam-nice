@@ -1045,14 +1045,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5117300567774862641, guid: a3cedcb0413c97a80a25a91a8c085238,
+        type: 3}
+      propertyPath: winFlamingTargetPercent
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 5117300567774862655, guid: a3cedcb0413c97a80a25a91a8c085238,
         type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1214801272, guid: a3cedcb0413c97a80a25a91a8c085238, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3cedcb0413c97a80a25a91a8c085238, type: 3}
+--- !u!82 &2021172590 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 988092673809840984, guid: a3cedcb0413c97a80a25a91a8c085238,
+    type: 3}
+  m_PrefabInstance: {fileID: 1469814375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8325520185045880632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1154,6 +1164,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 530595227, guid: a55c8a05f32ce3d9c9b58901acbc17f7, type: 3}
+      propertyPath: randomPainAudioSource
+      value: 
+      objectReference: {fileID: 2021172590}
     - target: {fileID: 8404482832169510644, guid: a55c8a05f32ce3d9c9b58901acbc17f7,
         type: 3}
       propertyPath: m_Name
