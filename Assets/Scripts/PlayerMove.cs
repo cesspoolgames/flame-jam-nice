@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour
         }
 
         movement = movement.normalized * effectiveSpeed * factorByGameObjectScale;
-        transform.position += movement * Time.deltaTime;
+        GetComponent<Rigidbody2D>().MovePosition(transform.position + movement * Time.deltaTime);
     }
 
     public void GivePowerUp()
