@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 644910270069765991}
   - component: {fileID: 1971481578}
+  - component: {fileID: 1618735878}
   m_Layer: 0
   m_Name: FillBar
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 644910270069765990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 491.00577, y: 210.60884, z: 0}
-  m_LocalScale: {x: 20, y: 13, z: 1}
+  m_LocalScale: {x: 16.8, y: 16.8, z: 0.84}
   m_Children:
   - {fileID: 6504247588116744066}
   - {fileID: 1253468659490170256}
@@ -45,6 +46,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09f2323888b9546248f18a537e738b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1618735878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644910270069765990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fddbf93a781dfae6785a69dc487f50b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2678695662893025063
@@ -222,6 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullFillImage: {fileID: 1253468659490170256}
   fillImage: {fileID: 6504247588116744066}
+  fillRate: 2
 --- !u!1 &7129426353457083654
 GameObject:
   m_ObjectHideFlags: 0

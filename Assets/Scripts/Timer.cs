@@ -15,6 +15,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
+        realTimeSeconds = GlobalState.instance.defaultLevelSeconds;
         diff = displayTimeHours / realTimeSeconds;
     }
 

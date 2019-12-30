@@ -7,6 +7,11 @@ public class PlayerMove : MonoBehaviour
 
     public float speed = 4;
 
+    void Start()
+    {
+        speed = GlobalState.instance.playerSpeed;
+    }
+
     void FixedUpdate()
     {
         var horizontal = Input.GetAxisRaw("Horizontal");
