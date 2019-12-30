@@ -25,12 +25,12 @@ public class Timer : MonoBehaviour
             TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
             realTimeSeconds -= Time.deltaTime;
             int timeToShow = (int)(realTimeSeconds * diff) + 1;
-            mText.text = timeToShow.ToString() + 'h';
+            mText.text = timeToShow.ToString() + ":00";
         }
         else
         {
             TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
-            mText.text = "0h";
+            mText.text = "0:00";
             if (OnTimeOut != null && !timeEnded)
             {
                 timeEnded = true;
