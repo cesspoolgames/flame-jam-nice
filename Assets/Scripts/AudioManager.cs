@@ -8,10 +8,31 @@ public class AudioManager : MonoBehaviour
     public float firstLoopPlayMinutes = 2;
     public float secondLoopPlayMinutes = 2;
     public float thirdLoopPlayMinutes = 1;
+    public AudioSource randomStartStageSound;
+    public AudioClip[] startStageAudioSources;
+    public AudioSource randomPainAudioSource;
+    public AudioClip[] painClips;
+
     private float timePassed;
     private bool soundOneStarted = false;
     private bool soundTwoStarted = false;
     private bool soundThreeStarted = false;
+
+    void Start()
+    {
+        StartCoroutine(SoundCoroutine());
+    }
+
+    IEnumerator SoundCoroutine()
+    {
+        GameObject levelStart = this.transform.Find("Audio Source Level Start").gameObject;
+        levelStart.GetComponent<AudioSource>().Play();
+        soundOneStarted = true;
+        yield return new WaitForSeconds(0.6f);
+        randomStartStageSound.clip = startStageAudioSources[Random.Range(0, startStageAudioSources.Length)];
+        randomStartStageSound.Play();
+        soundOneStarted = false;
+    }
 
     void Update()
     {
@@ -40,5 +61,11 @@ public class AudioManager : MonoBehaviour
             sound3.GetComponent<AudioSource>().Play();
             soundThreeStarted = true;
         }
+    }
+
+    public void PlayPainSound()
+    {
+        randomPainAudioSource.clip = painClips[Random.Range(0, painClips.Length)];
+        randomPainAudioSource.Play();
     }
 }

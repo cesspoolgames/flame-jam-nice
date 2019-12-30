@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GlobalState : MonoBehaviour
 {
     public Flame flameBar;
-
+    private AudioManager manager; 
     private static GameJamTarget currentTable;
 
     private static int level = 0;
@@ -65,6 +65,7 @@ public class GlobalState : MonoBehaviour
         {
             var flame = area.GetComponent<GameJamTarget>().Flame;
             sum += flame;
+            manager.PlayPainSound();
         }
         flameBar.SetFillBar(sum * 0.25f); // TODO: per level win condition or %?
     }
