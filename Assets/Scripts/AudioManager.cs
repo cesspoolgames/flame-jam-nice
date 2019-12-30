@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
         soundOneStarted = true;
         yield return new WaitForSeconds(0.6f);
         soundOneStarted = false;
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         randomStartStageSound.clip = startStageAudioSources[Random.Range(0, startStageAudioSources.Length)];
         randomStartStageSound.Play();
     }
