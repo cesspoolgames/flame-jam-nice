@@ -77,6 +77,12 @@ public class GlobalState : MonoBehaviour
 
     void Update()
     {
+        if (timerRunning && Input.GetKeyDown(KeyCode.Return))
+        {
+            RestartLevel();
+            return;
+        }
+
         var hitAreas = GameObject.FindGameObjectsWithTag("HitArea");
         var sum = 0f;
         foreach (var area in hitAreas)
