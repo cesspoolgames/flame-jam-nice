@@ -71,6 +71,7 @@ public class GlobalState : MonoBehaviour
             sum += flame;
         }
         var totalNeeded = hitAreas.Length * 10 * winFlamingTargetPercent / 100; // 10 magic number = flaming cap
+        Debug.Log(sum + " === " + totalNeeded);
         flameBar.SetFillBar(sum / totalNeeded); // TODO: per level win condition or %?
     }
 }

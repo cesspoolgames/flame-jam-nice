@@ -13,6 +13,10 @@ public class Flame : MonoBehaviour
     public static event FullBarAction OnBarFilled;
     void Start()
     {
+        if (!fillImage)
+        {
+
+        }
         var newScale = this.fillImage.localScale;
         newScale.x = 0;
         this.fillImage.localScale = newScale;
