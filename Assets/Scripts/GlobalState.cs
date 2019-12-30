@@ -11,7 +11,7 @@ public class GlobalState : MonoBehaviour
     public float defaultLevelSeconds = 60;
     public float winFlamingTargetPercent = 80;
     public float healPerSecond = 0.5f;
-    public int lastScreenId = 2;
+    public static int lastScreenId = 2;
 
     public Flame flameBar;
     public AudioManager manager;
