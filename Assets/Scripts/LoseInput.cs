@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class LoseInput : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public AudioSource winOrLoseBg;
+
     void Start()
     {
-        // Play winlose background loop
+        winOrLoseBg.Play();
     }
 
     // Update is called once per frame

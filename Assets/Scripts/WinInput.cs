@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class WinInput : MonoBehaviour
 {
-    // Update is called once per frame
+    public AudioSource winOrLoseBg;
+
     void Start()
     {
-        // Play winlose background loop
+        winOrLoseBg.Play();
     }
     void Update()
     {
