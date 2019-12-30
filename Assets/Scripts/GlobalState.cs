@@ -12,6 +12,8 @@ public class GlobalState : MonoBehaviour
 
     private static int level = 0;
 
+    static GlobalState instance;
+
     public static GameJamTarget CurrentTable
     {
         set { currentTable = value; } // so we can have more control later on
@@ -20,8 +22,16 @@ public class GlobalState : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-        SceneManager.sceneLoaded += SearchForFlameBar;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += SearchForFlameBar;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void SearchForFlameBar(Scene scene, LoadSceneMode mode)
