@@ -68,6 +68,12 @@ public class GlobalState : MonoBehaviour
 
     static public void RestartLevel()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "FinalWin")
+        {
+            level = 0;
+        }
         SceneManager.LoadScene("Level" + level);
         instance.timerRunning = true;
         if (OnLevelStart != null)
