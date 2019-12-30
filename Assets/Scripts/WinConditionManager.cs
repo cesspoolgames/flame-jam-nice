@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class TestTimeoutEvent : MonoBehaviour
+public class WinConditionManager : MonoBehaviour
 {
-    private static TestTimeoutEvent _instance;
-    public static TestTimeoutEvent Instance
+    private static WinConditionManager _instance;
+    public static WinConditionManager Instance
     {
         get { return _instance; }
     }
