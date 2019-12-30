@@ -62,10 +62,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb609b4cf41ecfb3beba570090e96c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 3
+  playerSpeed: 3.5
   powerUpTimeSeconds: 2
   powerUpSpeedFactor: 2
-  defaultLevelSeconds: 60
+  defaultLevelSeconds: 35
   winFlamingTargetPercent: 75
   healPerSecond: 0.7
   flameBar: {fileID: 7592605635871111217}
