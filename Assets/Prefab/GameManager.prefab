@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 8
   defaultLevelSeconds: 60
-  winFlamingTargetPercent: 80
+  winFlamingTargetPercent: 90
   flameBar: {fileID: 0}
