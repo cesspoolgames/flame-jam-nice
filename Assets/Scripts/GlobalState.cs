@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GlobalState : MonoBehaviour
 {
     public float playerSpeed = 3;
-    public float playerSpeedWithPowerUp = 5;
+    public float powerUpTimeSeconds = 2;
+    public float powerUpSpeedFactor = 2;
     public float defaultLevelSeconds = 60;
     public float winFlamingTargetPercent = 80;
     public float healPerSecond = 0.5f;

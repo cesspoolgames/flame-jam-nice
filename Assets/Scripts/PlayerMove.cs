@@ -4,12 +4,10 @@ using UnityEngine.Tilemaps;
 
 public class PlayerMove : MonoBehaviour
 {
-
-    public float speed = 4;
+    private float powerUpTimeSeconds = 0;
 
     void Start()
     {
-        speed = GlobalState.instance.playerSpeed;
     }
 
     void FixedUpdate()
@@ -19,6 +17,12 @@ public class PlayerMove : MonoBehaviour
 
         Move(horizontal, vertical);
         RotateAccordingToPosition(horizontal, vertical);
+
+        powerUpTimeSeconds -= Time.deltaTime;
+        if (powerUpTimeSeconds < 0)
+        {
+            powerUpTimeSeconds = 0;
+        }
     }
 
     private void RotateAccordingToPosition(float horizontal, float vertical)
@@ -38,7 +42,18 @@ public class PlayerMove : MonoBehaviour
         var movement = new Vector3(horizontal, vertical, 0);
         var factorByGameObjectScale = transform.localScale.x;
 
-        movement = movement.normalized * speed * factorByGameObjectScale;
+        var effectiveSpeed = GlobalState.instance.playerSpeed;
+        if (powerUpTimeSeconds > 0)
+        {
+            effectiveSpeed = GlobalState.instance.playerSpeed * GlobalState.instance.powerUpSpeedFactor;
+        }
+
+        movement = movement.normalized * effectiveSpeed * factorByGameObjectScale;
         transform.position += movement * Time.deltaTime;
+    }
+
+    public void GivePowerUp()
+    {
+        powerUpTimeSeconds += GlobalState.instance.powerUpTimeSeconds;
     }
 }

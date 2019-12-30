@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("AMIR!");
+        GameObject.FindWithTag("Player").GetComponent<PlayerMove>().GivePowerUp();
+        Destroy(gameObject);
     }
 }
