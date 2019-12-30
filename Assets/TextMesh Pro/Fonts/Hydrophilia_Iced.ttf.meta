@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: e0dd647d4e9a34b2baa658dea5c1feb9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hydrophilia Iced
+  fontNames:
+  - Hydrophilia Iced
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5eceecdc49e694c419ba7ec9a9abcba4, type: 3}
+  - {fileID: 12800000, guid: 54810eced41bc4823b1eef133278c73a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
