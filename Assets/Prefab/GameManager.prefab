@@ -63,6 +63,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5117300567774862640}
     m_Modifications:
+    - target: {fileID: 988092673658174421, guid: 1e278cfd5656546bd91a42094984baaa,
+        type: 3}
+      propertyPath: m_TagString
+      value: AudioSourcePain
+      objectReference: {fileID: 0}
     - target: {fileID: 988092673666890144, guid: 1e278cfd5656546bd91a42094984baaa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -237,11 +242,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5117300567774862640}
     m_Modifications:
-    - target: {fileID: 9216390068399732546, guid: ba77ee8eeb4db400083cb7322fe429ab,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 9216390068399732547, guid: ba77ee8eeb4db400083cb7322fe429ab,
         type: 3}
       propertyPath: m_LocalPosition.x
