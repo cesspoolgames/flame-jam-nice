@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb609b4cf41ecfb3beba570090e96c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 8
+  playerSpeed: 4
   defaultLevelSeconds: 60
   winFlamingTargetPercent: 90
-  healPerSecond: 300
+  healPerSecond: 0.7
   flameBar: {fileID: 0}
