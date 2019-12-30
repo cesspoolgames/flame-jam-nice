@@ -900,16 +900,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 923760060943012723, guid: a3cedcb0413c97a80a25a91a8c085238,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: fd9d5b2a0ffe542e4b12193cfbadf122, type: 3}
-    - target: {fileID: 988092673809840986, guid: a3cedcb0413c97a80a25a91a8c085238,
-        type: 3}
-      propertyPath: m_TagString
-      value: AudioSourcePain
-      objectReference: {fileID: 0}
     - target: {fileID: 5117300567774862640, guid: a3cedcb0413c97a80a25a91a8c085238,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -965,30 +955,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5117300567774862641, guid: a3cedcb0413c97a80a25a91a8c085238,
-        type: 3}
-      propertyPath: defaultLevelSeconds
-      value: 60
-      objectReference: {fileID: 0}
     - target: {fileID: 5117300567774862655, guid: a3cedcb0413c97a80a25a91a8c085238,
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 9216390068884608800, guid: a3cedcb0413c97a80a25a91a8c085238,
-        type: 3}
-      propertyPath: m_text
-      value: 30:00
-      objectReference: {fileID: 0}
-    - target: {fileID: 9216390068884608800, guid: a3cedcb0413c97a80a25a91a8c085238,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9216390068884608801, guid: a3cedcb0413c97a80a25a91a8c085238,
-        type: 3}
-      propertyPath: displayTimeHours
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3cedcb0413c97a80a25a91a8c085238, type: 3}
