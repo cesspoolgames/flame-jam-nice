@@ -8,14 +8,15 @@ public class KeepTheFlameBar : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(instance.gameObject);
+            instance = this;
         }
     }
 }
