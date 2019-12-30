@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1948010952}
-  appearanceTime: 0.4
+  appearanceTime: 2.3
 --- !u!1 &5117300567774862655
 GameObject:
   m_ObjectHideFlags: 0
