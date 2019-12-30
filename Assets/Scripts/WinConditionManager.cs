@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class WinConditionManager : MonoBehaviour
 {
+    public AudioManager manager;
     private static WinConditionManager _instance;
     public static WinConditionManager Instance
     {
@@ -19,6 +20,7 @@ public class WinConditionManager : MonoBehaviour
 
     void GameWon()
     {
+        manager.StopSceneMusic();
         GameObject winSound = this.transform.Find("Audio Source Win").gameObject;
         winSound.GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("Win");
@@ -26,6 +28,7 @@ public class WinConditionManager : MonoBehaviour
 
     void EndGame()
     {
+        manager.StopSceneMusic();
         GameObject loseSound = this.transform.Find("Audio Source Lose").gameObject;
         loseSound.GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("Lose");
@@ -40,6 +43,6 @@ public class WinConditionManager : MonoBehaviour
         }
 
         _instance = this;
-        // DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
     }
 }

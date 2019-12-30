@@ -29,9 +29,10 @@ public class AudioManager : MonoBehaviour
         levelStart.GetComponent<AudioSource>().Play();
         soundOneStarted = true;
         yield return new WaitForSeconds(0.6f);
+        soundOneStarted = false;
+        yield return new WaitForSeconds(0.5f);
         randomStartStageSound.clip = startStageAudioSources[Random.Range(0, startStageAudioSources.Length)];
         randomStartStageSound.Play();
-        soundOneStarted = false;
     }
 
     void Update()
@@ -63,9 +64,22 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void StopSceneMusic()
+    {
+        GameObject sound1 = this.transform.Find("Audio Source Stage One").gameObject;
+        GameObject sound2 = this.transform.Find("Audio Source Stage Two").gameObject;
+        GameObject sound3 = this.transform.Find("Audio Source Stage Three").gameObject;
+        sound1.GetComponent<AudioSource>().Stop();
+        sound2.GetComponent<AudioSource>().Stop();
+        sound3.GetComponent<AudioSource>().Stop();
+        soundOneStarted = true;
+        soundTwoStarted = true;
+        soundThreeStarted = true;
+    }
+
     public void PlayPainSound()
     {
         randomPainAudioSource.clip = painClips[Random.Range(0, painClips.Length)];
-        randomPainAudioSource.Play();
+        randomPainAudioSource.PlayOneShot(randomPainAudioSource.clip);
     }
 }
