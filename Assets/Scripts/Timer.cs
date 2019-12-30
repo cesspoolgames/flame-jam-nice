@@ -11,12 +11,18 @@ public class Timer : MonoBehaviour
     public delegate void TimerTimeOutAction();
     public static event TimerTimeOutAction OnTimeOut;
 
+    public void RestartTime()
+    {
+        realTimeSeconds = GlobalState.instance.defaultLevelSeconds;
+        diff = displayTimeHours / realTimeSeconds;
+    }
+
     bool timeEnded = false;
 
     void Start()
     {
-        realTimeSeconds = GlobalState.instance.defaultLevelSeconds;
-        diff = displayTimeHours / realTimeSeconds;
+        RestartTime();
+        GlobalState.OnNewLevelStart += RestartTime;
     }
 
     void Update()

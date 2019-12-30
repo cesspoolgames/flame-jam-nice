@@ -21,6 +21,9 @@ public class GlobalState : MonoBehaviour
 
     static public GlobalState instance;
 
+    public delegate void OnNewLevelStartAction();
+    public static event OnNewLevelStartAction OnNewLevelStart;
+
     public static GameJamTarget CurrentTable
     {
         set { currentTable = value; } // so we can have more control later on
@@ -57,6 +60,10 @@ public class GlobalState : MonoBehaviour
         Debug.Log("LEVEL!" + level);
         SceneManager.LoadScene("Level" + level);
         instance.timerRunning = true;
+        if (OnNewLevelStart != null)
+        {
+            OnNewLevelStart();
+        }
     }
 
     static public void RestartLevel()
