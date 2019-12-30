@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (realTimeSeconds >= 0)
+        if (realTimeSeconds >= 0 && GlobalState.instance.timerRunning)
         {
             TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
             realTimeSeconds -= Time.deltaTime;

@@ -17,6 +17,7 @@ public class GlobalState : MonoBehaviour
     private static GameJamTarget currentTable;
 
     private static int level = 0;
+    public bool timerRunning = true;
 
     static public GlobalState instance;
 
@@ -41,27 +42,27 @@ public class GlobalState : MonoBehaviour
 
     void Start()
     {
-        Timer.OnTimeOut += OnTimeOut;
+        Timer.OnTimeOut += StopTimer;
+        Flame.OnBarFilled += StopTimer;
     }
 
-    void Destroy()
+    void StopTimer()
     {
-        Timer.OnTimeOut -= OnTimeOut;
-    }
-
-    void OnTimeOut()
-    {
+        timerRunning = false;
     }
 
     static public void LoadNextLevel()
     {
         level++;
+        Debug.Log("LEVEL!" + level);
         SceneManager.LoadScene("Level" + level);
+        instance.timerRunning = true;
     }
 
     static public void RestartLevel()
     {
         SceneManager.LoadScene("Level" + level);
+        instance.timerRunning = true;
     }
 
     void Update()

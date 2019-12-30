@@ -35,11 +35,9 @@ public class Flame : MonoBehaviour
     {
         if (fillAmount >= 1 && !barFull)
         {
-            Debug.Log("TRUE");
             barFull = true;
             if (OnBarFilled != null)
             {
-                Debug.Log("NICE");
                 OnBarFilled();
             }
         }
