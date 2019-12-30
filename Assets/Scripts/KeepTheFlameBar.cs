@@ -13,10 +13,5 @@ public class KeepTheFlameBar : MonoBehaviour
         {
             instance = this;
         }
-        else
-        {
-            Destroy(instance.gameObject);
-            instance = this;
-        }
     }
 }

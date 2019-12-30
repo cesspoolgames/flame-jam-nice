@@ -14,20 +14,19 @@ public class Flame : MonoBehaviour
     public static event FullBarAction OnBarFilled;
     void Start()
     {
-        SceneManager.sceneLoaded += FindNewFillImage;
+        SceneManager.sceneLoaded += OnSceneLoad;
         ResetEverything();
     }
 
     void ResetEverything()
     {
         barFull = false;
-        fillImage = GameObject.Find("FlameMask").transform;
-        var newScale = this.fillImage.localScale;
-        newScale.x = 0;
-        this.fillImage.localScale = newScale;
+        // var newScale = this.fillImage.localScale;
+        // newScale.x = 0;
+        // this.fillImage.localScale = newScale;
     }
 
-    void FindNewFillImage(Scene scene, LoadSceneMode loadMode)
+    void OnSceneLoad(Scene scene, LoadSceneMode loadMode)
     {
         ResetEverything();
     }

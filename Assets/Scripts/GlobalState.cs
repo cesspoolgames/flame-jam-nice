@@ -29,7 +29,6 @@ public class GlobalState : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            flameBar = GameObject.FindObjectOfType<Flame>();
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -69,11 +68,14 @@ public class GlobalState : MonoBehaviour
         var sum = 0f;
         foreach (var area in hitAreas)
         {
-            var flame = area.GetComponent<GameJamTarget>().Flame;
-            sum += flame;
+            var flameAmountOfArea = area.GetComponent<GameJamTarget>().Flame;
+            sum += flameAmountOfArea;
             manager.PlayPainSound();
         }
-        var totalNeeded = hitAreas.Length * 10 * winFlamingTargetPercent / 100; // 10 magic number = flaming cap
-        flameBar.SetFillBar(sum / totalNeeded); // TODO: per level win condition or %?
+        if (hitAreas.Length > 0)
+        {
+            var totalNeeded = hitAreas.Length * 10 * winFlamingTargetPercent / 100; // 10 magic number = flaming cap
+            flameBar.SetFillBar(sum / totalNeeded); // TODO: per level win condition or %?
+        }
     }
 }
