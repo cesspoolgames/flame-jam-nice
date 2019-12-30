@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class TestTimeoutEvent : MonoBehaviour
 {
-    private bool didWin = false;
-    private bool didLose = false;
     private static TestTimeoutEvent _instance;
     public static TestTimeoutEvent Instance
     {
@@ -20,32 +19,12 @@ public class TestTimeoutEvent : MonoBehaviour
 
     void GameWon()
     {
-        TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
-        mText.text = "You Win! Press Any Key to Continue";
-        didWin = true;
+        SceneManager.LoadScene("Win");
     }
 
     void EndGame()
     {
-        TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
-        mText.text = "Press Any Key to Try Again";
-        didLose = true;
-    }
-
-    void Update()
-    {
-        if (Input.anyKeyDown && didLose)
-        {
-            Debug.Log("lose");
-            didLose = false;
-            Application.LoadLevel(1);
-        }
-        else if (Input.anyKeyDown && didWin)
-        {
-            Debug.Log("win");
-            didWin = false;
-            Application.LoadLevel(2);
-        }
+        SceneManager.LoadScene("Lose");
     }
 
     private void Awake()

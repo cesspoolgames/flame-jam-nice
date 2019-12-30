@@ -36,18 +36,13 @@ public class GlobalState : MonoBehaviour
 
     void Update()
     {
-        debugText.GetComponent<Text>().text = "";
         var hitAreas = GameObject.FindGameObjectsWithTag("HitArea");
-        var text = "";
         var sum = 0f;
         foreach (var area in hitAreas)
         {
             var flame = area.GetComponent<GameJamTarget>().Flame;
-            text += flame.ToString("0.00") + " | ";
             sum += flame;
         }
-        debugText.GetComponent<Text>().text = text + " ==> " + sum.ToString();
-
-        flameBar.SetFillBar(sum / 25);
+        flameBar.SetFillBar(sum / 25); // TODO: per level win condition or %?
     }
 }
