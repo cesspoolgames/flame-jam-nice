@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1773227e79934a22298493251f84fb93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
 --- !u!50 &8404482832169510647
 Rigidbody2D:
   serializedVersion: 4
@@ -149,6 +148,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1.5
+  randomPainAudioSource: {fileID: 0}
+  painClips:
+  - {fileID: 8300000, guid: efcdfc50a7b484b0e95e2adf2a7a8812, type: 3}
+  - {fileID: 8300000, guid: a7fde00b83e9b45b2b54b0c2099ec3ed, type: 3}
+  - {fileID: 8300000, guid: e90d7bbec0b6d4a448372bc31f10d6ac, type: 3}
+  - {fileID: 8300000, guid: 844b237c0d59e47ab80857fa5498ed20, type: 3}
+  - {fileID: 8300000, guid: d3a9289723705489d9ebb4f49487b25c, type: 3}
+  - {fileID: 8300000, guid: 9f158af26b8ba440cb1828eff37ee6aa, type: 3}
+  - {fileID: 8300000, guid: 4f3d9b211b80d48cab5122ff92803b1d, type: 3}
+  - {fileID: 8300000, guid: 576d8931dd61c4f5496fe2b093b7c368, type: 3}
+  - {fileID: 8300000, guid: 110926a2f0c664314bdb0a2565bb44ce, type: 3}
+  - {fileID: 8300000, guid: d53a37d45d350417685415e392cb5af2, type: 3}
+  - {fileID: 8300000, guid: 89f30acaa695944359a3518d4250f67e, type: 3}
+  - {fileID: 8300000, guid: 48f509f5475254e64b1d88ee79995740, type: 3}
 --- !u!95 &530595228
 Animator:
   serializedVersion: 3
