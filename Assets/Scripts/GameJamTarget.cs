@@ -22,6 +22,7 @@ public class GameJamTarget : MonoBehaviour
 
     public void GetHit(float howMuch)
     {
+        SentenceManager.ShowNewWordIfNeeded();
         TilemapTileChanger.SetUnderAttack(tilePointer.position);
         flame += howMuch;
         if (flame > flameCap)
