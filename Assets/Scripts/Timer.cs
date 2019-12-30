@@ -21,10 +21,13 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (realTimeSeconds >= 0 && GlobalState.instance.timerRunning)
+        if (realTimeSeconds >= 0)
         {
             TextMeshProUGUI mText = gameObject.GetComponent<TextMeshProUGUI>();
-            realTimeSeconds -= Time.deltaTime;
+            if (GlobalState.instance.timerRunning)
+            {
+                realTimeSeconds -= Time.deltaTime;
+            }
             int timeToShow = (int)(realTimeSeconds * diff) + 1;
             mText.text = timeToShow.ToString() + ":00";
         }
