@@ -12,6 +12,7 @@ TagManager:
   - AudioSourceFlamedBad
   - AudioSourceFlamedGood
   - AudioSourceTotallyFlamed
+  - AudioSourceLoseOrWinBgMusic
   layers:
   - Default
   - TransparentFX
