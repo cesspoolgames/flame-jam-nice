@@ -8,7 +8,7 @@ public class Flame : MonoBehaviour
     public Transform fullFillImage;
 
     public Transform fillImage;
-    public int fillRate = 3;
+    public float fillRate = 1.75f;
     private bool barFull = false;
     public delegate void FullBarAction();
     public static event FullBarAction OnBarFilled;
