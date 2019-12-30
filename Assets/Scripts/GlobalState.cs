@@ -29,6 +29,8 @@ public class GlobalState : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            flameBar = GameObject.FindObjectOfType<Flame>();
+            Debug.Log("FALEM" + flameBar);
             DontDestroyOnLoad(gameObject);
         }
         else
