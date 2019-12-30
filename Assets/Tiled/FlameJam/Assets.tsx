@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.2" tiledversion="1.3.1" name="Assets" tilewidth="32" tileheight="32" tilecount="224" columns="8">
- <image source="Assets.png" width="257" height="897"/>
+<tileset version="1.2" tiledversion="1.3.1" name="Assets" tilewidth="32" tileheight="32" tilecount="232" columns="8">
+ <image source="Assets.png" width="257" height="929"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0.125" y="0.125" width="31.625" height="31.5"/>
@@ -504,6 +504,16 @@
    <object id="1" x="25.3146" y="31.9005">
     <polygon points="0,0 0.0686033,-15.0241 -1.64648,-16.7392 -1.71508,-19.2775 -5.00804,-19.7577 -5.69407,-19.0717 -10.6335,-19.6891 -11.2509,-18.3857 -14.8183,-19.2089 -15.2299,-16.8764 -17.0136,-14.2695 -16.8078,-0.0686033"/>
    </object>
+  </objectgroup>
+ </tile>
+ <tile id="224">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="7.95798" y="-0.0686033" width="23.9425" height="31.9005"/>
+  </objectgroup>
+ </tile>
+ <tile id="225">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="-2.1267" y="-0.0686033" width="27.7843" height="32.2435"/>
   </objectgroup>
  </tile>
 </tileset>
