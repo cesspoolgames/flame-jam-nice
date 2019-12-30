@@ -9,6 +9,9 @@ public class GlobalState : MonoBehaviour
     private Flame flameBar;
 
     private static GameJamTarget currentTable;
+
+    private static int level = 0;
+
     public static GameJamTarget CurrentTable
     {
         set { currentTable = value; } // so we can have more control later on
@@ -38,6 +41,17 @@ public class GlobalState : MonoBehaviour
 
     void OnTimeOut()
     {
+    }
+
+    static public void LoadNextLevel()
+    {
+        level++;
+        SceneManager.LoadScene("Level" + level);
+    }
+
+    static public void RestartLevel()
+    {
+        SceneManager.LoadScene("Level" + level);
     }
 
     void Update()
