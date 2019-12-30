@@ -7,6 +7,12 @@ public class PlayerAttack : MonoBehaviour
     public float damage = 1f;
     public AudioSource randomPainAudioSource;
     public AudioClip[] painClips;
+
+    void Start()
+    {
+        randomPainAudioSource = GameObject.FindWithTag("AudioSourcePain").GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
