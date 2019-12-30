@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GlobalState : MonoBehaviour
 {
+    public float playerSpeed = 3;
+    public float defaultLevelSeconds = 60;
+    public float winFlamingTargetPercent = 80;
+
     public Flame flameBar;
 
     private static GameJamTarget currentTable;
 
     private static int level = 0;
 
-    static GlobalState instance;
+    static public GlobalState instance;
 
     public static GameJamTarget CurrentTable
     {
@@ -66,6 +70,7 @@ public class GlobalState : MonoBehaviour
             var flame = area.GetComponent<GameJamTarget>().Flame;
             sum += flame;
         }
-        flameBar.SetFillBar(sum * 0.25f); // TODO: per level win condition or %?
+        var totalNeeded = hitAreas.Length * 10 * winFlamingTargetPercent / 100; // 10 magic number = flaming cap
+        flameBar.SetFillBar(sum / totalNeeded); // TODO: per level win condition or %?
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameJamTarget : MonoBehaviour
 {
-    public float flameCap = 10f; // can't flame over this value
+    const float flameCap = 10f; // can't flame over this value
     private float flame = 0f; // decreases over time
     private float healPerSecond = 0.5f;
     private Transform tilePointer;
